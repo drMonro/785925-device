@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Yuriy Shustov](https://up.htmlacademy.ru/htmlcss/22/user/785925).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Пономарёва](https://htmlacademy.ru/profile/id153610).
 
 ---
 
