@@ -10,8 +10,8 @@
     <header class="main-header">
 
       <nav class="main-navigation">
-        <a class="main-header-logo"><img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина современных гаджетов «Device»"></a>
-        <!-- Здесь будет форма поиска -->
+        <a class="main-header-logo" href="#"><img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина современных гаджетов «Device»"></a>
+        <input type="search" tabindex="1">
         <ul class="user-navigation">
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
@@ -190,7 +190,18 @@
       <section class="write-us">
 
         <span class="modal-close">x</span>
-        <!--Здесь будет форма-->
+        <form action="#" method="post">
+          <label>Ваше имя:
+            <input type="text" name="name">
+          </label>
+          <label>Ваш e-mail:
+            <input type="email" name="email">
+          </label>
+          <label>Текст письма:
+            <textarea name="letter" id="letter"></textarea>
+          </label>
+          <input type="button" value="Отправить">
+        </form>
 
       </section>
 
