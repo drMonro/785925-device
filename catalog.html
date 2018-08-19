@@ -10,8 +10,8 @@
   <header class="main-header">
 
     <nav class="main-navigation">
-      <a class="main-header-logo"><img src="img/logo-header.svg" width="163" height="34" alt="Логотип магазина современных гаджетов «Device»"></a>
-      <!-- Здесь будет форма поиска -->
+      <a class="main-header-logo" href="#"><img src="img/logo-header.svg" width="163" height="34" alt="Инетернет-магазин современных гаджетов «Device»"></a>
+      <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по товарам магазина">
       <ul class="user-navigation">
         <li><a href="#">Валентин Петухов</a></li>
         <li><a href="#">Выйти</a></li>
@@ -22,7 +22,7 @@
         <li><a href="#">Каталог товаров</a>
           <ul class="catalog-navigation">
             <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="monopods.html">Моноподы для селфи</a></li>
+            <li><a href="catalog.html">Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Умные часы</a></li>
@@ -52,19 +52,62 @@
       <h2 class="visually-hidden">Навигация по категории товаров магазина современных гаджетов «Device»</h2>
 
       <div class="filter">
-        <b>Фильтр</b>
-        <!--Здесь будет форма с фильтрацией товаров-->
+        <form action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
+          <fieldset>
+            <legend>Фильтр</legend>
+            <label>
+              Стоимость
+              <input type="range" id="price" name="price" min="0" max="5000" aria-label="Фильтр товаров по цене">
+              <output name="priceoutput">0</output>
+            </label>
+            <fieldset>
+              <legend>Цвет</legend>
+              <label>
+                <input type="checkbox" checked>
+                Чёрный
+              </label>
+              <label>
+                <input type="checkbox">
+                Белый
+              </label>
+              <label>
+                <input type="checkbox" checked>
+                Синий
+              </label>
+              <label>
+                <input type="checkbox" checked>
+                Красный
+              </label>
+              <label>
+                <input type="checkbox">
+                Розовый
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Bluetooth</legend>
+              <label>
+                <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
+                Есть
+              </label>
+              <label>
+                <input type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
+                Нет
+              </label>
+            </fieldset>
+            <button type="button" aria-label="Отфильтровать товары">Показать</button>
+          </fieldset>
+        </form>
       </div>
 
       <div class="items">
         <div class="sorting-panel">
           <span>Сортировка:</span>
           <nav class="sort-nav">
-            <button>По цене</button>
-            <button>По типу</button>
-            <button>По популярности</button>
-            <button class="low-to-high"></button>
-            <button class="high-to-low"></button>
+            <button type="button" aria-label="Отсортировать товары по цене">По цене</button>
+            <button type="button" aria-label="Отсортировать товары по типц">По типу</button>
+            <button type="button" aria-label="Отсортировать товары по популярности">По популярности</button>
+            <button type="button" aria-label="Отсортировать товары - вначале дешёвые "> class="low-to-high"></button>
+            <button type="button" aria-label="Отсортировать товары - вначале дорогие"> class="high-to-low"></button>
           </nav>
         </div>
         <div class="items-panel">
@@ -98,13 +141,13 @@
           </div>
         </div>
         <div class="pagination">
-          <a href="#">Назад</a>
+          <a href="#" aria-label="Предыдующая страница каталога">Назад</a>
           <nav class="pagination-nav">
-            <button>1</button>
-            <button><a href="#">2</a></button>
-            <button><a href="#">3</a></button>
+            <button aria-label="Первая страница каталога">1</button>
+            <button aria-label="Вторая страница каталога"><a href="#">2</a></button>
+            <button aria-label="Третья страница каталога"><a href="#">3</a></button>
           </nav>
-          <a href="#">Вперёд</a>
+          <a href="#" aria-label="Следующая страница каталога">Вперёд</a>
         </div>
       </div>
 
@@ -113,7 +156,7 @@
 
   <footer>
 
-    <a class="footer-logo"><img src="img/logo-footer.svg" width="163" height="36" alt="Логотип магазина современных гаджетов «Device»"></a>
+    <a class="main-header-logo" href="#"><img src="img/logo-header.svg" width="163" height="34" alt="Инетернет-магазин современных гаджетов «Device»"></a>
     <nav>
       <ul class="user-navigation">
         <li><a href="#">Валентин Петухов</a></li>
@@ -133,10 +176,11 @@
     <a href="tel:+74959459595">Тел.: +7 (495) 495-95-95</a>
     <nav>
       <ul class="links">
-        <li><a href="facebook.com"><img src="img/fb.svg" width="32" height="32" alt="Логотип «HTML академии»"></a></li>
-        <li><a href="insta.com"><img src="img/insta.svg" width="32" height="32" alt="Логотип «HTML академии»"></a></li>
-        <li><a href="twitter.com"><img src="img/twitter.svg" width="32" height="32" alt="Логотип «HTML академии»"></a></li>
+        <li><a href="#" aria-label="Наш Фейсбук"><img src="img/fb.svg" width="32" height="32" alt="Страница в Facebook магазина современных гаджетов «Device»"></a></li>
+        <li><a href="#" aria-label="Наш Инстаграм"><img src="img/insta.svg" width="32" height="32" alt="Страница в Instagram магазина современных гаджетов «Device»"></a></li>
+        <li><a href="#" aria-label="Наш Твиттер"><img src="img/twitter.svg" width="32" height="32" alt="Страница в Twitter магазина современных гаджетов «Device»"></a></li>
       </ul>
+      <a href="https://htmlacademy.ru.com" aria-label="Сайт «HTML аккадемии»"><img src="img/logo-html.svg" width="26" height="34" alt="Сайт «HTML академии»"></a>
     </nav>
 
   </footer>
