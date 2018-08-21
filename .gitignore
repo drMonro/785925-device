@@ -10,3 +10,6 @@ node_modules/
 npm-debug.*
 Thumbs.db
 lvl1_html_device.iml
+sass/
+gulpfile.js
+
