@@ -3,34 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/stylesheet.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="main-header">
 
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html"><img src="img/logo-header.svg" width="163" height="34" alt="Инетернет-магазин современных гаджетов «Device»"></a>
+    <nav class="header-menu">
+      <a class="main-header-logo" href="#"><img src="img/logo-header.svg" width="163" height="34" alt="Инетернет-магазин современных гаджетов «Device»"></a>
       <form method="get">
-        <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по товарам магазина">
+        <input type="search" class="main-navigation-search" placeholder="Поиск по сайту" aria-label="Поиск по товарам магазина">
       </form>
       <ul class="user-navigation">
         <li><a href="#">Валентин Петухов</a></li>
-        <li><a href="#">Выйти</a></li>
+        <li><a href="#" class="header-exit">Выйти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
       <ul class="main-navigation">
-        <li><a href="#">Каталог товаров</a>
+        <li><a href="#" class="catalog-title">Каталог товаров</a>
           <ul class="catalog-navigation">
             <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html" class="disabled">Моноподы для селфи</a></li>
+            <li><a>Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Умные часы</a></li>
             <li><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
+      </ul>
+      <ul class="site-navigation">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
@@ -41,7 +45,7 @@
 
   <main class="container">
 
-    <h1 class="page-title">Моноподы для селфи</h1>
+    <h1 class="catalog-page-title">Моноподы для селфи</h1>
 
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
@@ -53,18 +57,18 @@
 
       <h2 class="visually-hidden">Навигация по категории товаров магазина современных гаджетов «Device»</h2>
 
-      <div class="filter">
+      <div class="catalog-filter">
         <form action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
           <fieldset>
-            <legend>Фильтр</legend>
+            <b class="catalog-filter-title">Фильтр:</b>
             <label>
-              Стоимость
+              <span>Стоимость</span>
               <input type="range" id="price" name="price" min="0" max="5000" aria-label="Фильтр товаров по цене">
               <output name="priceoutput">0</output>
             </label>
           </fieldset>
           <fieldset>
-            <legend>Цвет</legend>
+            <span>Цвет</span>
             <label>
               <input type="checkbox" checked>
               Чёрный
@@ -87,7 +91,7 @@
             </label>
           </fieldset>
           <fieldset>
-            <legend>Bluetooth</legend>
+            <span>Bluetooth</span>
             <label>
               <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
               Есть
@@ -101,10 +105,10 @@
         </form>
       </div>
 
-      <div class="items">
+      <div class="catalog-items">
         <div class="sorting-panel">
-          <span>Сортировка:</span>
-          <a href="#" aria-label="Отсортировать товары по цене">По цене</a>
+          <b>Сортировка:</b>
+          <a href="#" aria-label="Отсортировать товары по цене" class="chosen-sort">По цене</a>
           <a href="#" aria-label="Отсортировать товары по типц">По типу</a>
           <a href="#" aria-label="Отсортировать товары по популярности">По популярности</a>
           <a href="#" aria-label="Отсортировать товары - вначале дешёвые"></a>
@@ -150,30 +154,34 @@
       </div>
 
     </section>
+
   </main>
 
   <footer>
 
-    <img src="img/logo-header.svg" width="163" height="34" alt="Инетернет-магазин современных гаджетов «Device»">
-    <ul class="user-navigation">
+    <a href="#" class="footer-logo"><img src="img/logo-footer.svg" width="163" height="36" alt="Логотип магазина современных гаджетов «Device»"></a>
+    <ul class="footer-user-navigation">
       <li><a href="#">Валентин Петухов</a></li>
-      <li><a href="#">Выйти</a></li>
+      <li><a href="#" class="footer-exit">Выйти</a></li>
       <li><a href="#">Сравнить</a></li>
       <li><a href="#">Корзина</a></li>
     </ul>
-    <ul class="main-navigation">
+    <ul class="footer-main-navigation">
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Гарантия</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
-    <p>г. Москва, ул. Строителей, 15</p>
-    <a href="tel:+74959459595">Тел.: +7 (495) 495-95-95</a>
-    <ul class="links">
+    <p class="footer-contacts">
+      г. Москва, ул. Строителей, 15<br>
+      <a href="tel:+74959459595">Тел.: +7 (495) 495-95-95</a>
+    </p>
+
+    <ul class="footer-links">
       <li><a href="#" aria-label="Наш Фейсбук"><img src="img/fb.svg" width="32" height="32" alt="Страница в Facebook магазина современных гаджетов «Device»"></a></li>
       <li><a href="#" aria-label="Наш Инстаграм"><img src="img/insta.svg" width="32" height="32" alt="Страница в Instagram магазина современных гаджетов «Device»"></a></li>
       <li><a href="#" aria-label="Наш Твиттер"><img src="img/twitter.svg" width="32" height="32" alt="Страница в Twitter магазина современных гаджетов «Device»"></a></li>
     </ul>
-    <a href="https://htmlacademy.ru.com" aria-label="Сайт «HTML аккадемии»"><img src="img/logo-html.svg" width="26" height="34" alt="Сайт «HTML академии»"></a>
+    <a href="https://htmlacademy.ru.com" class="mentor-link" aria-label="Сайт «HTML аккадемии»"><img src="img/logo-html.svg" width="26" height="34" alt="Сайт «HTML академии»"></a>
 
   </footer>
 
