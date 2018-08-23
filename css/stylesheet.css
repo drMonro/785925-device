@@ -1,592 +1,478 @@
-@font-face
-{
-    font-family: 'gilroy';
-    font-weight: 200;
-    font-style: normal;
+@font-face {
+  font-weight: 200;
+  font-family: "gilroy";
+  font-style: normal;
 
-    src: url('../fonts/gilroylight.woff2') format('woff2');
+  src: url("../fonts/gilroylight.woff2") format("woff2");
 }
 
-@font-face
-{
-    font-family: 'gilroy';
-    font-weight: 800;
-    font-style: normal;
+@font-face {
+  font-weight: 800;
+  font-family: "gilroy";
+  font-style: normal;
 
-    src: url('../fonts/gilroyextrabold.woff2') format('woff2');
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
-@font-face
-{
-    font-family: 'opensans';
-    font-weight: 300;
-    font-style: normal;
+@font-face {
+  font-weight: 300;
+  font-family: "opensans";
+  font-style: normal;
 
-    src: url('../fonts/opensanslight.woff2') format('woff2');
+  src: url("../fonts/opensanslight.woff2") format("woff2");
 }
 
-@font-face
-{
-    font-family: 'opensans';
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-weight: normal;
+  font-family: "opensans";
+  font-style: normal;
 
-    src: url('../fonts/opensans.woff2') format('woff2');
+  src: url("../fonts/opensans.woff2") format("woff2");
 }
 
-body
-{
-    font-family: opensans, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 30px;
+body {
+  margin: 0;
+  padding: 0;
 
-    margin: 0;
-    padding: 0;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: opensans, Arial, sans-serif;
+  color: #000000;
+  letter-spacing: 0.01em;
 
-    letter-spacing: .01em;
-
-    color: #000;
-    background-color: #fff;
+  background-color: #ffffff;
 }
 
-a
-{
-    text-decoration: none;
-
-    color: #000;
+a {
+  color: #000000; 
+  text-decoration: none;
 }
 
-.visually-hidden
-{
-    position: absolute;
+.visually-hidden {
+  position: absolute;
 
-    clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; 
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+  clip: rect(0 0 0 0);
 }
 
-.header-menu
-{
-    background-color: #f6e09a;
+.header-menu {
+  background-color: #f6e09a;
 }
-.header-menu ul
-{
-    list-style: none;
+.header-menu ul {
+  list-style: none;
 }
 
 .main-header-logo:hover,
-.main-header-logo:focus
-{
-    opacity: .6;
+.main-header-logo:focus {
+  opacity: 0.6;
 }
 
-.main-header-logo:active
-{
-    opacity: .3;
+.main-header-logo:active {
+  opacity: 0.3;
 }
 
-.main-navigation-search
-{
-    border: none; 
-    background-color: inherit;
+.main-navigation-search {
+  background-color: inherit;
+  border: none;
 }
 
-.main-navigation-search:focus
-{
-    outline: none;
+.main-navigation-search:focus {
+  outline: none;
 }
 
-.main-navigation-search::-webkit-search-cancel-button
-{
-    display: none;
+.main-navigation-search::-webkit-search-cancel-button {
+  display: none;
 }
 
-.main-navigation-search::-webkit-input-placeholder
-{
-    color: rgba(0, 0, 0, .3);
+.main-navigation-search::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.main-navigation-search:-moz-placeholder
-{
-    color: rgba(0, 0, 0, .3);
+.main-navigation-search:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.main-navigation-search:hover::-webkit-input-placeholder
-{
-    color: rgba(0, 0, 0, .6);
+.main-navigation-search:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.main-navigation-search:hover:-moz-placeholder
-{
-    color: rgba(0, 0, 0, .6);
+.main-navigation-search:hover:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.main-navigation-search:focus::-webkit-input-placeholder
-{
-    color: #000;
+.main-navigation-search:focus::-webkit-input-placeholder {
+  color: #000000;
 }
 
-.main-navigation-search:focus:-moz-placeholder
-{
-    color: #000;
+.main-navigation-search:focus:-moz-placeholder {
+  color: #000000;
 }
 
 .user-navigation a:hover,
-.user-navigation a:focus
-{
-    color: rgba(0, 0, 0, .6);
+.user-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.user-navigation a:active
-{
-    color: rgba(0, 0, 0, .3);
+.user-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.user-exit
-{
-    color: rgba(0, 0, 0, .3);
+.user-exit {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .site-navigation,
-.catalog-title
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .2em;
-    text-transform: uppercase;
+.catalog-title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
 }
 
 .site-navigation a:hover,
 .catalog-title:hover,
 .site-navigation a:focus,
-.catalog-title:focus
-{
-    color: rgba(0, 0, 0, .6);
+.catalog-title:focus {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .site-navigation a:active,
-.catalog-title:active
-{
-    color: rgba(0, 0, 0, .3);
+.catalog-title:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.catalog-navigation
-{
-    line-height: 36px;
+.catalog-navigation {
+  line-height: 36px;
 }
 
 .catalog-navigation a:hover,
-.catalog-navigation a:focus
-{
-    color: rgba(0, 0, 0, .6);
+.catalog-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.catalog-navigation a:active
-{
-    color: rgba(0, 0, 0, .3);
+.catalog-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.slider-description b
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
-    line-height: 56px;
-
-    letter-spacing: .01em;
+.slider-description b {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 56px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.table-first-row
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 36px;
-    font-weight: 200;
-    line-height: 48px;
-
-    letter-spacing: .01em;
+.table-first-row {
+  font-weight: 200;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.table-second-row
-{
-    font-size: 13px;
-    line-height: 20px;
-
-    letter-spacing: .01em;
+.table-second-row {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
 }
 
-.index-category-list
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    list-style: none; 
-
-    letter-spacing: .01em;
+.index-category-list {
+  list-style: none; 
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.advantages
-{
-    background-color: #e4e4e4;
+.advantages {
+  background-color: #e4e4e4;
 }
 
-.advantages-list button
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .2em;
-    text-transform: uppercase;
+.advantages-list button {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
 }
 
-.advantage h3
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
-    line-height: 48px;
-
-    letter-spacing: .01em;
+.advantage h3 {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .brands ul,
-footer ul
-{
-    list-style: none;
+footer ul {
+  list-style: none;
 }
 
 .contacts h2,
-.about h2
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
-    line-height: 48px;
-
-    letter-spacing: .01em;
+.about h2 {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .contacts p,
-.about p
-{
-    letter-spacing: normal;
+.about p {
+  letter-spacing: normal;
 }
 
-.about ul
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 40px;
-
-    list-style: none;
-
-    letter-spacing: normal;
+.about ul {
+  list-style: none;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 40px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: normal;
 }
 
-.section-button
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .2em;
-    text-transform: uppercase;
+.section-button {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
 }
 
-.index-write-us label
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: normal;
+.index-write-us label {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: normal;
 }
 
-.index-input
-{
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
+.index-input {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+  letter-spacing: normal;
 
-    resize: none; 
-    letter-spacing: normal;
+  background-color: rgba(228, 228, 228, 0.5);
+  border: none;
 
-    color: #464646;
-    border: none;
-    background-color: rgba(228, 228, 228, .5);
+  resize: none;
 }
 
-.index-input:hover
-{
-    background-color: rgba(228, 228, 228, .8);
+.index-input:hover {
+  background-color: rgba(228, 228, 228, 0.8);
 }
 
 .index-input:focus,
-.index-input:active
-{
-    border: 3px solid rgba(240, 197, 46, .5);
-    outline: none; 
-    background-color: rgba(255, 255, 255, .5);
+.index-input:active {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(240, 197, 46, 0.5);
+  outline: none;
 }
 
-.index-input::-webkit-input-placeholder
-{
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
-
-    letter-spacing: normal; 
-
-    color: rgba(70, 70, 70, .4);
+.index-input::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+  letter-spacing: normal;
 }
 
-.index-input:-moz-placeholder
-{
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
-
-    letter-spacing: normal; 
-
-    color: rgba(70, 70, 70, .4);
+.index-input:-moz-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+  letter-spacing: normal;
 }
 
-footer
-{
-    background-color: #464646;
+footer {
+  background-color: #464646;
 }
 
 .footer-logo:hover,
-.footer-logo:focus
-{
-    opacity: .6;
+.footer-logo:focus {
+  opacity: 0.6;
 }
 
-.footer-logo:active
-{
-    opacity: .3;
+.footer-logo:active {
+  opacity: 0.3;
 }
 
-.footer-user-navigation a
-{
-    line-height: 36px; 
-
-    color: rgba(255, 255, 255, .7);
+.footer-user-navigation a {
+  line-height: 36px; 
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-user-navigation a:hover,
-.footer-user-navigation a:focus
-{
-    color: #fff;
+.footer-user-navigation a:focus {
+  color: #ffffff;
 }
 
-.footer-user-navigation a:active
-{
-    color: rgba(255, 255, 255, .3);
+.footer-user-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-user-navigation .footer-exit
-{
-    color: rgba(255, 255, 255, .3);
+.footer-user-navigation .footer-exit {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-main-navigation a
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .2em;
-    text-transform: uppercase; 
-
-    color: #fff;
+.footer-main-navigation a {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
 }
 
 .footer-main-navigation a:hover,
-.footer-main-navigation a:focus
-{
-    color: rgba(255, 255, 255, .6);
+.footer-main-navigation a:focus {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-main-navigation a:active
-{
-    color: rgba(255, 255, 255, .3);
+.footer-main-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-contacts,
-.footer-contacts a
-{
-    letter-spacing: normal; 
-
-    color: #fff;
+.footer-contacts a {
+  color: #ffffff;
+  letter-spacing: normal;
 }
 
-.footer-links a
-{
-    opacity: .3;
+.footer-links a {
+  opacity: 0.3;
 }
 
 .footer-links a:hover,
-.footer-links a:focus
-{
-    opacity: .6;
+.footer-links a:focus {
+  opacity: 0.6;
 }
 
-.footer-links a:active
-{
-    opacity: .1;
+.footer-links a:active {
+  opacity: 0.1;
 }
 
 .mentor-link:hover,
-.mentor-link:focus
-{
-    opacity: .6;
+.mentor-link:focus {
+  opacity: 0.6;
 }
 
-.mentor-link:active
-{
-    opacity: .3;
+.mentor-link:active {
+  opacity: 0.3;
 }
 
-.catalog-page-title
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
-    line-height: 48px;
-
-    letter-spacing: .01em;
+.catalog-page-title {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.breadcrumbs
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 24px;
-
-    list-style: none;
-
-    letter-spacing: .01em;
+.breadcrumbs {
+  list-style: none;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 .breadcrumbs a,
-.breadcrumbs li
-{
-    color: rgba(0, 0, 0, .3);
+.breadcrumbs li {
+  color: rgba(0, 0, 0, 0.3);
 }
 .breadcrumbs a:hover,
-.breadcrumbs a:focus
-{
-    color: rgba(0, 0, 0, .6);
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
 }
-.breadcrumbs a:active
-{
-    color: rgba(0, 0, 0, .1);
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
 }
 
-.catalog-filter
-{
-    background-color: #eee;
+.catalog-filter {
+  background-color: #eeeeee;
 }
-.catalog-filter fieldset
-{
-    border: none;
+.catalog-filter fieldset {
+  border: none;
 }
-.catalog-filter b
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
+.catalog-filter b {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 
-    letter-spacing: .2em;
-    text-transform: uppercase;
-
-    background-color: #dadada;
+  background-color: #dadada;
 }
-.catalog-filter label
-{
-    font-size: 14px;
-    line-height: 40px;
+.catalog-filter label {
+  font-size: 14px;
+  line-height: 40px;
 }
-.catalog-filter span
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .01em;
+.catalog-filter span {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.sorting-panel
-{
-    background-color: #eee;
+.sorting-panel {
+  background-color: #eeeeee;
 }
-.sorting-panel b
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .2em;
-    text-transform: uppercase;
+.sorting-panel b {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
 }
-.sorting-panel a
-{
-    font-family: opensans, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
-
-    letter-spacing: normal; 
-
-    color: rgba(0, 0, 0, .3);
+.sorting-panel a {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: opensans, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: normal;
 }
 .sorting-panel a:hover,
-.sorting-panel a:focus
-{
-    color: rgba(0, 0, 0, .6);
+.sorting-panel a:focus {
+  color: rgba(0, 0, 0, 0.6);
 }
-.sorting-panel a:active
-{
-    color: #000;
+.sorting-panel a:active {
+  color: #000000;
 }
-.sorting-panel .chosen-sort
-{
-    color: #000;
+.sorting-panel .chosen-sort {
+  color: #000000;
 }
 
-.items-panel h2
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-
-    letter-spacing: .01em;
+.items-panel h2 {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.items-panel span
-{
-    font-family: gilroy, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 24px;
-
-    letter-spacing: .01em;
+.items-panel span {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
