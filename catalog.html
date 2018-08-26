@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -62,105 +62,107 @@
 
         <h2 class="visually-hidden">Навигация по категории товаров магазина современных гаджетов «Device»</h2>
 
-        <div class="catalog-container container">
           <div class="catalog-wrapper">
-            <div class="catalog-filter">
-              <form action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
-                <fieldset>
-                  <b class="catalog-filter-title">Фильтр:</b>
-                  <label>
-                    <span>Стоимость</span>
-                    <input type="range" id="price" name="price" min="0" max="5000" aria-label="Фильтр товаров по цене">
-                    <output name="priceoutput">0</output>
-                  </label>
-                </fieldset>
-                <fieldset>
-                  <span>Цвет</span>
-                  <label>
-                    <input type="checkbox" checked>
-                    Чёрный
-                  </label>
-                  <label>
-                    <input type="checkbox">
-                    Белый
-                  </label>
-                  <label>
-                    <input type="checkbox" checked>
-                    Синий
-                  </label>
-                  <label>
-                    <input type="checkbox" checked>
-                    Красный
-                  </label>
-                  <label>
-                    <input type="checkbox">
-                    Розовый
-                  </label>
-                </fieldset>
-                <fieldset>
-                  <span>Bluetooth</span>
-                  <label>
-                    <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
-                    Есть
-                  </label>
-                  <label>
-                    <input type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
-                    Нет
-                  </label>
-                </fieldset>
-                <button type="button" aria-label="Отфильтровать товары">Показать</button>
-              </form>
-            </div>
+              <div class="catalog-filter">
+                <form action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
+                  <fieldset>
+                    <b class="catalog-filter-title">Фильтр:</b>
+                    <label>
+                      <span>Стоимость</span>
+                      <input type="range" id="price" name="price" min="0" max="5000" aria-label="Фильтр товаров по цене">
+                      <output name="priceoutput">0</output>
+                    </label>
+                  </fieldset>
+                  <fieldset>
+                    <span>Цвет</span>
+                    <label>
+                      <input type="checkbox" checked>
+                      Чёрный
+                    </label>
+                    <label>
+                      <input type="checkbox">
+                      Белый
+                    </label>
+                    <label>
+                      <input type="checkbox" checked>
+                      Синий
+                    </label>
+                    <label>
+                      <input type="checkbox" checked>
+                      Красный
+                    </label>
+                    <label>
+                      <input type="checkbox">
+                      Розовый
+                    </label>
+                  </fieldset>
+                  <fieldset>
+                    <span>Bluetooth</span>
+                    <label>
+                      <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
+                      Есть
+                    </label>
+                    <label>
+                      <input type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
+                      Нет
+                    </label>
+                  </fieldset>
+                  <button type="button" aria-label="Отфильтровать товары">Показать</button>
+                </form>
+              </div>
 
-            <div class="catalog-items">
-              <div class="sorting-panel">
-                <b>Сортировка:</b>
-                <a href="#" aria-label="Отсортировать товары по цене" class="chosen-sort">По цене</a>
-                <a href="#" aria-label="Отсортировать товары по типц">По типу</a>
-                <a href="#" aria-label="Отсортировать товары по популярности">По популярности</a>
-                <a href="#" aria-label="Отсортировать товары - вначале дешёвые"></a>
-                <a href="#" aria-label="Отсортировать товары - вначале дорогие"></a>
+              <div class="catalog-items">
+
+                <div class="items-wrapper">
+
+                  <div class="sorting-panel">
+                    <b>Сортировка:</b>
+                    <a href="#" aria-label="Отсортировать товары по цене" class="chosen-sort">По цене</a>
+                    <a href="#" aria-label="Отсортировать товары по типц">По типу</a>
+                    <a href="#" aria-label="Отсортировать товары по популярности">По популярности</a>
+                    <a href="#" aria-label="Отсортировать товары - вначале дешёвые"></a>
+                    <a href="#" aria-label="Отсортировать товары - вначале дорогие"></a>
+                  </div>
+                  <div class="items-panel">
+                    <div class="item">
+                      <a href="#">
+                        <h2>Любительская селфи-палка</h2>
+                        <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                      </a>
+                      <span>500 руб.</span>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <h2>Профессиональная селфи-палка </h2>
+                        <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                      </a>
+                      <span>1500 руб.</span>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <h2>Непотопляемая селфи-палка</h2>
+                        <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                      </a>
+                      <span>2500 руб.</span>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <h2>Селфи-палка «Следуй за мной»</h2>
+                        <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                      </a>
+                      <span>4900 руб.</span>
+                    </div>
+                  </div>
+                  <div class="pagination">
+                    <a href="#" aria-label="Предыдующая страница каталога">Назад</a>
+                    <a aria-label="Первая страница каталога">1</a>
+                    <a href="#" aria-label="Вторая страница каталога">2</a>
+                    <a href="#" aria-label="Третья страница каталога">3</a>
+                    <a href="#" aria-label="Следующая страница каталога">Вперёд</a>
+                  </div>
+                </div>
               </div>
-              <div class="items-panel">
-                <div class="item">
-                  <a href="#">
-                    <h2>Любительская селфи-палка</h2>
-                    <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                  </a>
-                  <span>500 руб.</span>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <h2>Профессиональная селфи-палка </h2>
-                    <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                  </a>
-                  <span>1500 руб.</span>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <h2>Непотопляемая селфи-палка</h2>
-                    <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                  </a>
-                  <span>2500 руб.</span>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <h2>Селфи-палка «Следуй за мной»</h2>
-                    <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  </a>
-                  <span>4900 руб.</span>
-                </div>
-              </div>
-              <div class="pagination">
-                <a href="#" aria-label="Предыдующая страница каталога">Назад</a>
-                <a aria-label="Первая страница каталога">1</a>
-                <a href="#" aria-label="Вторая страница каталога">2</a>
-                <a href="#" aria-label="Третья страница каталога">3</a>
-                <a href="#" aria-label="Следующая страница каталога">Вперёд</a>
-              </div>
-            </div>
           </div>
-        </div>
       </section>
     </main>
 

@@ -31,8 +31,6 @@
 }
 
 body {
-  min-width: 1200px;
-  min-height: 1750px;
   margin: 0;
   padding: 0;
 
@@ -69,10 +67,14 @@ a {
 
 .header-menu {
   margin-top: 40px; 
+  padding-left: 60px;
 
   background-color: #f6e09a;
 }
 .header-menu ul {
+  margin: 0;
+  padding: 0; 
+
   list-style: none;
 }
 
@@ -86,26 +88,16 @@ a {
 
 .main-header-logo {
   width: 163px;
-  margin-left: 60px;
 }
 
 .main-header form,
 .main-navigation {
-  width: 540px; 
-  margin-left: 60px;
+  width: 540px;
 }
 
 .user-navigation,
 .site-navigation {
   width: 500px;
-  margin: 0;
-  padding: 0;
-}
-
-.main-navigation {
-  margin: 0;
-  margin-left: 60px; 
-  padding: 0;
 }
 
 .main-header-logo:hover,
@@ -388,26 +380,23 @@ footer ul {
 }
 
 .index-write-us {
-  width: 960px; 
+  width: 960px;
   margin: 0 auto;
+  padding-left: 100px;
 }
 
 .name-input {
   width: 360px;
-  margin-left: 100px;
 }
 
 .mail-input {
   width: 360px;
-  margin-left: 40px;
+  padding-left: 40px;
 }
 
-.letter-input {
-  width: 760px;
-  margin-left: 100px;
-}
 .letter-input textarea {
   width: 760px;
+  height: 156px;
 }
 
 .section-button {
@@ -427,10 +416,6 @@ footer ul {
   line-height: 24px;
   font-family: gilroy, Arial, sans-serif;
   letter-spacing: normal;
-}
-
-.index-write-us button {
-  margin-left: 100px;
 }
 
 .index-input {
@@ -641,27 +626,33 @@ footer {
 }
 
 .catalog-items {
-  width: 832px;
+  width: 64%;
 }
 .catalog-items .item {
   width: 360px;
 }
 
+.catalog-filter {
+  width: 36%;
+}
+.catalog-filter fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 .item:nth-child(2n+1) {
-  margin-left: 72px;
+  padding-left: 72px;
 }
 
 .item:nth-child(2n) {
-  margin-left: 40px;
+  padding-left: 40px;
 }
 
 .pagination {
-  margin-left: 72px;
+  padding-left: 72px;
 }
 
 .catalog-filter {
-  width: 328px;
-
   background-color: #eeeeee;
 }
 .catalog-filter fieldset {
@@ -687,6 +678,10 @@ footer {
   line-height: 24px;
   font-family: gilroy, Arial, sans-serif;
   letter-spacing: 0.01em;
+}
+.catalog-filter form {
+  width: 328px;
+  margin-left: auto;
 }
 
 .sorting-panel {
