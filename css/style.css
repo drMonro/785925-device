@@ -351,8 +351,8 @@ input[type="radio"].visually-hidden {
 .catalog-title::after {
   content: "";
   position: absolute;
-  top: 4px;
-  right: -30px;
+  top: 3px;
+  right: -29px;
 
   width: 16px;
   height: 16px;
@@ -908,7 +908,7 @@ footer ul {
   content: "";
   position: absolute;
   top: 16px;
-  left: 0;
+  left: -1px;
 
   width: 8px;
   height: 8px;
@@ -925,6 +925,9 @@ footer ul {
 }
 .contacts p {
   margin-bottom: 40px;
+}
+.contacts img {
+  margin-bottom: 76px;
 }
 
 .contacts h2,
@@ -943,6 +946,7 @@ footer ul {
 
 .about ul {
   margin: 0;
+  margin-bottom: 76px;
   padding: 0;
 
   list-style: none;
@@ -1347,18 +1351,45 @@ footer {
 .catalog-items {
   width: 64%;
 }
-.catalog-items .item {
+
+.item {
   width: 360px;
 }
-.catalog-items .item-wrapper {
+.item .item-wrapper {
+  position: relative; 
+
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
   -webkit-flex-wrap: wrap;
-          flex-wrap: wrap; 
+          flex-wrap: wrap;
 
       -ms-flex-wrap: wrap;
+}
+.item .flag {
+  content: "";
+  position: absolute;
+  top: 0; 
+  right: 0;
+
+  width: 70px;
+  height: 71px;
+
+  background-image: url("../img/new-circle.svg");
+  background-repeat: no-repeat;
+}
+.item .flag span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  text-transform: uppercase; 
+  letter-spacing: 0.5em;
 }
 
 .catalog-filter {
@@ -1375,11 +1406,113 @@ footer {
           box-sizing: border-box;
   width: 100%;
   min-height: 70px;
+  margin-bottom: 69px; 
   padding-top: 25px;
-  padding-right: 240px; 
+  padding-right: 180px;
 
   vertical-align: middle;
   text-align: right;
+}
+
+.filter-range {
+  width: 201px;
+}
+
+.filter-title {
+  width: 201px;
+  margin-bottom: 35px;
+  padding-top: 16px;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  letter-spacing: 0.01em;
+
+  border-top: 2px solid black;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 67px;
+}
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 60%;
+  height: 2px;
+
+  background: #91c92f;
+}
+.range-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+.range-controls .min-price,
+.range-controls .max-price {
+  position: absolute;
+
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: gilroy, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.2); 
+  letter-spacing: 0.01em;
+}
+.range-controls .min-price {
+  top: 10px;
+  left: 4px;
+}
+.range-controls .max-price {
+  top: 10px;
+  right: 28px;
+}
+.range-controls input {
+  width: 50px;
+  margin: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #91c92f;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 60%;
 }
 
 .item:nth-child(2n+1) {
@@ -1388,6 +1521,15 @@ footer {
 
 .item:nth-child(2n) {
   padding-left: 40px;
+}
+
+.color-filter label,
+.bt-filter label {
+  display: block;
+}
+
+.color-filter {
+  margin-bottom: 20px;
 }
 
 .catalog-filter {
@@ -1418,7 +1560,7 @@ footer {
   letter-spacing: 0.01em;
 }
 .catalog-filter form {
-  width: 328px;
+  width: 269px;
   margin-left: auto;
 }
 

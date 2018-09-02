@@ -86,47 +86,58 @@
 
         <form action="https://echo.htmlacademy.ru" oninput="priceoutput.value=price.value">
           <fieldset>
-            <label>
-              <span>Стоимость</span>
-              <input type="range" id="price" name="price" min="0" max="5000" aria-label="Фильтр товаров по цене">
-              <output name="priceoutput">0</output>
-            </label>
+            <div class="filter-range">
+              <div class="filter-title">Стоимость</div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <div class="range-toggle range-toggle-max"></div>
+                <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+              </div>
+            </div>
           </fieldset>
           <fieldset>
-            <span>Цвет</span>
-            <label>
-              <input type="checkbox" checked>
-              Чёрный
-            </label>
-            <label>
-              <input type="checkbox">
-              Белый
-            </label>
-            <label>
-              <input type="checkbox" checked>
-              Синий
-            </label>
-            <label>
-              <input type="checkbox" checked>
-              Красный
-            </label>
-            <label>
-              <input type="checkbox">
-              Розовый
-            </label>
+            <div class="filter-title">Цвет</div>
+            <div class="color-filter">
+              <label>
+                <input type="checkbox" checked>
+                Чёрный
+              </label>
+              <label>
+                <input type="checkbox">
+                Белый
+              </label>
+              <label>
+                <input type="checkbox" checked>
+                Синий
+              </label>
+              <label>
+                <input type="checkbox" checked>
+                Красный
+              </label>
+              <label>
+                <input type="checkbox">
+                Розовый
+              </label>
+            </div>
           </fieldset>
           <fieldset>
-            <span>Bluetooth</span>
-            <label>
-              <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
-              Есть
-            </label>
-            <label>
-              <input type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
-              Нет
-            </label>
+            <div  class="filter-title">Bluetooth</div>
+            <div class="bt-filter">
+              <label>
+                <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
+                Есть
+              </label>
+              <label>
+                <input type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
+                Нет
+              </label>
+            </div>
           </fieldset>
-          <button type="button" aria-label="Отфильтровать товары">Показать</button>
+          <button class="button" type="button" aria-label="Отфильтровать товары">Показать</button>
         </form>
       </div>
 
@@ -169,6 +180,11 @@
             </div>
             <div class="item">
               <a href="#" class="item-wrapper">
+                <div class="flag flag-new"><span>new</span></div>
+                <div class="actions">
+                  <a href="#" class="buy">Купить</a>
+                  <a href="#" class="bookmark">В закладки</a>
+                </div>
                 <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 <h2>Селфи-палка «Следуй за мной»</h2>
                 <span>4900 руб.</span>
