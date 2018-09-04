@@ -366,14 +366,16 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.catalog-title:hover .catalog-navigation {
-  z-index: 100; 
+.catalog-title:hover ~ .catalog-navigation {
+  position: absolute;
+  z-index: 100;
 
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
   height: auto;
+  padding-bottom: 50px;
 }
 
 .catalog-navigation {
@@ -570,27 +572,75 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-slide {
-  position: relative;
-  top: -112px;
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  z-index: 100;
 
+  font-size: 0;
+  text-align: center;
+
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+
+  width: 10px;
+  height: 10px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.main-slider {
+  position: relative;
+  top: -33px;
+}
+.main-slider ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
 }
-.main-slide .slider-image {
-  width: 600px; 
-  padding-left: 60px;
+.slider-item .slide-img {
+  width: 600px;
 }
-.main-slide .slider-description {
-  margin-left: 20px; 
-  padding-top: 80px;
+.slider-item .slide-description {
+  width: 560px;
 }
-
-.slider-description span {
+.slider-item span {
   position: absolute;
-  top: -12px;
+  top: -89px;
   right: 50px;
 
   margin: 0;
@@ -603,10 +653,9 @@ input[type="radio"].visually-hidden {
   color: #ffffff; 
   letter-spacing: 0.01em;
 }
-
-.slider-description b {
+.slider-item b {
   display: inline-block;
-  width: 68%;
+  width: 399px;
   margin-bottom: 20px; 
 
   font-weight: 800;
@@ -615,25 +664,88 @@ input[type="radio"].visually-hidden {
   font-family: gilroy, Arial, sans-serif;
   letter-spacing: 0.01em;
 }
-
-.slider-description p {
-  width: 495px;
+.slider-item p {
   margin: 0;
   margin-bottom: 60px;
 }
+.slider-item a {
+  margin-bottom: 70px;
+}
+.slider-item table {
+  margin-bottom: 85px;
+}
 
-.slider-buttons {
+.slider-item {
+  display: none;
+}
+
+.slider-item:nth-child(1) .slide-img {
+  position: relative;
+  top: -80px;
+  left: 80px; 
+
+  background-image: url("/img/slider-1.png");
+  background-repeat: no-repeat;
+}
+
+.slider-item:nth-child(2) .slide-img {
+  position: relative;
+  top: -80px;
+  left: 80px; 
+
+  background-image: url("/img/slider-2.png");
+  background-repeat: no-repeat;
+}
+
+.slider-item:nth-child(3) .slide-img {
+  position: relative;
+  top: -20px;
+  left: 40px; 
+
+  background-image: url("/img/slider-3.png");
+  background-repeat: no-repeat;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
 }
-.slider-buttons .button {
-  padding-bottom: 50px;
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }
-.slider-buttons .slider-pagination {
-  margin-right: 80px; 
-  margin-left: auto;
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+
+  background-color: inherit;
+  border: 1px solid #000000;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
 .slider-table {
@@ -919,13 +1031,16 @@ footer ul {
   content: "";
   position: absolute;
   top: 16px;
-  left: -1px;
+  left: 0;
 
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
 
-  background-image: url("../img/about-li.svg");
-  background-repeat: no-repeat;
+  background: #ffffff;
+  background-repeat: no-repeat; 
+  border: 2px solid #e5e5e5;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
 .contacts {
