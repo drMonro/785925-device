@@ -1040,6 +1040,40 @@ input[type="radio"].visually-hidden {
 
 .brands a {
   display: block;
+  width: 260px;
+  height: 100px;
+}
+
+.brands li:nth-child(1) {
+  background-image: url("../img/logo-1.png");
+}
+
+.brands li:nth-child(2) {
+  background-image: url("../img/logo-2.png");
+}
+
+.brands li:nth-child(3) {
+  background-image: url("../img/logo-3.png");
+}
+
+.brands li:nth-child(4) {
+  background-image: url("../img/logo-4.png");
+}
+
+.brands li:nth-child(1):hover {
+  background-image: url("../img/logo-1.jpg");
+}
+
+.brands li:nth-child(2):hover {
+  background-image: url("../img/logo-2.jpg");
+}
+
+.brands li:nth-child(3):hover {
+  background-image: url("../img/logo-3.jpg");
+}
+
+.brands li:nth-child(4):hover {
+  background-image: url("../img/logo-4.jpg");
 }
 
 .brands ul,
