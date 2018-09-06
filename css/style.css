@@ -407,7 +407,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 3px;
-  right: -29px;
+  right: 15px;
 
   width: 16px;
   height: 16px;
@@ -819,13 +819,21 @@ input[type="radio"].visually-hidden {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; 
+  min-width: 320px;
 
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
 }
 
+.slide-description tr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 .slide-description td {
-  padding-right: 80px;
+  min-width: 130px;
 }
 
 .table-first-row {
