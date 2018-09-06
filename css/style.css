@@ -154,10 +154,23 @@ input[type="radio"].visually-hidden {
   width: 163px;
 }
 
-.main-navigation-search::before {
+.first-header-line form {
+  position: relative;
+}
+
+.search-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.search-wrapper::before {
   content: "";
   position: absolute;
-  left: 5px;
+  top: 18px;
+  left: 0;
+  z-index: 200; 
 
   width: 16px;
   height: 16px;
@@ -172,16 +185,22 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header form {
-  width: 355px;
-  padding-right: 100px;
+  width: 526px;
 }
 
 .main-navigation-search {
   width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 35px;
 }
 
 .main-header input:focus {
   border-bottom: 2px solid black;
+}
+
+.main-header input:focus ~ .main-navigation-submit {
+  opacity: 1;
 }
 
 .user-navigation,
@@ -192,6 +211,8 @@ input[type="radio"].visually-hidden {
 .main-navigation-submit {
   width: 85px;
   height: 49px;
+  margin: 0;
+  padding: 0;
 
   background-color: transparent; 
   border: 2px solid black;
@@ -207,6 +228,10 @@ input[type="radio"].visually-hidden {
 
 .main-navigation-submit:active {
   color: rgba(255, 255, 255, 0.3);
+
+  background-color: #000000;
+  outline: none; 
+  opacity: 1;
 }
 
 .user-navigation {
@@ -366,6 +391,11 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.catalog-title {
+  padding-right: 50px; 
+  padding-bottom: 10px;
+}
+
 .catalog-title:hover ~ .catalog-navigation {
   position: absolute;
   z-index: 100;
@@ -375,7 +405,13 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display:         flex;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 38px;
+}
+
+.catalog-navigation:hover {
+  z-index: 100;
+
+  padding-bottom: 38px;
 }
 
 .catalog-navigation {
@@ -393,7 +429,7 @@ input[type="radio"].visually-hidden {
   margin-left: -60px;
   padding: 0;
 
-  background-color: #f5de9d;
+  background-color: #f6e09a;
 
       -ms-flex-wrap: wrap;
 }
@@ -953,8 +989,6 @@ input[type="radio"].visually-hidden {
 }
 
 .brands ul {
-  position: relative;
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -968,6 +1002,10 @@ input[type="radio"].visually-hidden {
 
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+}
+
+.brands a {
+  display: block;
 }
 
 .brands ul,
