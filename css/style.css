@@ -1021,6 +1021,9 @@ input[type="radio"].visually-hidden {
   border-right: 117px solid #000000;
   outline: none;
 }
+.advantages-list .button:active::after {
+  background-color: transparent;
+}
 
 .advantage-1,
 .advantage-2,
