@@ -758,7 +758,7 @@ input[type="radio"].visually-hidden {
   top: -78px;
   left: 90px; 
 
-  background-image: url("/img/slider-1.png");
+  background-image: url("../img/slider-1.png");
   background-repeat: no-repeat;
 }
 
@@ -767,7 +767,7 @@ input[type="radio"].visually-hidden {
   top: -67px;
   left: 116px; 
 
-  background-image: url("/img/slider-2.png");
+  background-image: url("../img/slider-2.png");
   background-repeat: no-repeat;
 }
 
@@ -776,7 +776,7 @@ input[type="radio"].visually-hidden {
   top: -14px;
   left: 31px; 
 
-  background-image: url("/img/slider-3.png");
+  background-image: url("../img/slider-3.png");
   background-repeat: no-repeat;
 }
 
