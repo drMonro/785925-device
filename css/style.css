@@ -752,8 +752,8 @@ input[type="radio"].visually-hidden {
 
 .slider-item:nth-child(2) .slide-img {
   position: relative;
-  top: -80px;
-  left: 80px; 
+  top: -67px;
+  left: 116px; 
 
   background-image: url("/img/slider-2.png");
   background-repeat: no-repeat;
@@ -761,8 +761,8 @@ input[type="radio"].visually-hidden {
 
 .slider-item:nth-child(3) .slide-img {
   position: relative;
-  top: -20px;
-  left: 40px; 
+  top: -14px;
+  left: 31px; 
 
   background-image: url("/img/slider-3.png");
   background-repeat: no-repeat;
@@ -808,6 +808,12 @@ input[type="radio"].visually-hidden {
   border: 1px solid #000000;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+}
+
+.slider-list li:nth-child(3) b {
+  position: relative;
+
+  width: 550px;
 }
 
 .slide-description tbody {
