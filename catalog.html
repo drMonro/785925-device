@@ -35,7 +35,7 @@
         </li>
       </ul>
     </div>
-    <div class="second-header-line">
+    <div class="second-header-line inner-header-padding">
       <ul class="main-navigation">
         <li>
           <a href="catalog.html" class="catalog-title">Каталог товаров</a>
@@ -102,42 +102,66 @@
             </div>
           </fieldset>
           <fieldset>
-            <div class="filter-title">Цвет</div>
-            <div class="color-filter">
-              <label>
-                <input type="checkbox" checked>
-                Чёрный
-              </label>
-              <label>
-                <input type="checkbox">
-                Белый
-              </label>
-              <label>
-                <input type="checkbox" checked>
-                Синий
-              </label>
-              <label>
-                <input type="checkbox" checked>
-                Красный
-              </label>
-              <label>
-                <input type="checkbox">
-                Розовый
-              </label>
-            </div>
+            <legend class="filter-title color-legend-margin">Цвет</legend>
+            <ul class="color-filter">
+              <li>
+                <input type="checkbox" class="visually-hidden filter-input-checkbox" checked>
+
+                <label>
+
+                  Чёрный
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" class="visually-hidden filter-input-checkbox">
+
+                <label>
+                  Белый
+                </label>
+
+              </li>
+              <li>
+                <input type="checkbox" class="visually-hidden filter-input-checkbox" checked>
+
+                <label>
+                  Синий
+                </label>
+
+              </li>
+              <li>
+                <input type="checkbox" class="visually-hidden filter-input-checkbox" checked>
+
+                <label>
+                  Красный
+                </label>
+
+              </li>
+              <li>
+                <input type="checkbox" class="visually-hidden filter-input-checkbox">
+
+                <label>
+                  Розовый
+                </label>
+
+              </li>
+            </ul>
           </fieldset>
           <fieldset>
-            <div  class="filter-title bt-margin">Bluetooth</div>
-            <div class="bt-filter">
-              <label>
-                <input type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth">
-                Есть
-              </label>
-              <label>
-                <input type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
-                Нет
-              </label>
-            </div>
+            <legend  class="filter-title bt-margin">Bluetooth</legend>
+            <ul class="bt-filter">
+              <li>
+                <input class="filter-input-radio visually-hidden" type="radio" name="bt" value="С bluetooth" aria-label="C bluetooth" checked>
+                <label>
+                  Есть
+                </label>
+              </li>
+              <li>
+                <input class="filter-input-radio visually-hidden" type="radio" name="bt" value="Без bluetooth" aria-label="Без bluetooth">
+                <label>
+                  Нет
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <button class="button" type="button" aria-label="Отфильтровать товары">Показать</button>
         </form>
@@ -177,7 +201,7 @@
                   <a href="#" class="add-compare">Добавить к сравнению</a>
                 </div>
                 <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                <h2>Профессиональная селфи-палка </h2>
+                <h2>Профессиональная селфи-палка</h2>
                 <span class="item-price">1500 руб.</span>
               </a>
             </div>

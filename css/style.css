@@ -83,6 +83,7 @@ input[type="radio"].visually-hidden {
 
 .button {
   position: relative;
+  z-index: 1;
 
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -95,8 +96,11 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-family: gilroy, Arial, sans-serif;
   text-align: center;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   letter-spacing: 0.2em;
+
+  background-color: transparent; 
+  border: none;
 }
 
 .button::after {
@@ -117,6 +121,8 @@ input[type="radio"].visually-hidden {
 }
 
 .button:hover {
+  z-index: 1;
+
   background-color: #f0c52e;
 }
 
@@ -133,8 +139,6 @@ input[type="radio"].visually-hidden {
 
 .header-menu {
   position: relative;
-
-  min-height: 299px;
 
   background-color: #f6e09a;
 }
@@ -157,6 +161,14 @@ input[type="radio"].visually-hidden {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
+}
+
+.second-header-line {
+  padding-bottom: 80px;
+}
+
+.inner-header-padding {
+  padding-bottom: 45px;
 }
 
 .first-header-line {
@@ -996,7 +1008,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 70px;
 }
 .advantages-list .button:hover {
-  background-color: #efc145;
+  background-color: #f0c52e;
 }
 .advantages-list .button:active {
   -webkit-box-sizing: content-box;
@@ -1375,7 +1387,10 @@ footer {
 .inner-footer-user-navigation li {
   position: relative;
 
-  padding-left: 26px;
+  padding-left: 22px;
+}
+.inner-footer-user-navigation > li:nth-child(2) {
+  padding-right: 0;
 }
 .inner-footer-user-navigation .logout {
   color: rgba(255, 255, 255, 0.3);
@@ -1388,12 +1403,13 @@ footer {
   display:         flex;
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap; 
+  padding: 0;
 
       -ms-flex-wrap: wrap;
 }
 
 .footer-cart-navigation li:last-child {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .footer-second-line {
@@ -1559,7 +1575,7 @@ footer {
 .catalog-page-title {
   margin: 0;
   margin-top: 40px;
-  margin-bottom: 35px; 
+  margin-bottom: 20px; 
   margin-left: 60px;
   padding: 0;
 
@@ -1605,7 +1621,7 @@ footer {
 .breadcrumbs li {
   position: relative;
 
-  padding-right: 40px;
+  padding-right: 35px;
 }
 .breadcrumbs li:not(:last-child)::after {
   content: "";
@@ -1628,7 +1644,7 @@ footer {
 }
 
 .catalog-items {
-  width: 64%;
+  width: 65%;
 }
 
 .items-panel {
@@ -1647,10 +1663,11 @@ footer {
   position: relative;
 
   width: 360px;
-  margin-bottom: 45px;
+  margin-bottom: 70px;
 }
-.items-panel .item:hover .actions {
-  display: block;
+.items-panel .item:nth-child(3),
+.items-panel .item:nth-child(4) {
+  margin-bottom: 50px;
 }
 .items-panel img {
   width: 360px;
@@ -1660,7 +1677,7 @@ footer {
 }
 .items-panel h2 {
   display: inline-block;
-  max-width: 254px; 
+  max-width: 254px;
   margin: 0;
   padding: 0;
 
@@ -1669,6 +1686,7 @@ footer {
   line-height: 24px;
   font-family: gilroy, Arial, sans-serif;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 .items-panel .actions {
   position: absolute;
@@ -1682,10 +1700,11 @@ footer {
 }
 .items-panel .buy {
   display: block;
-  width: 129px;
+  width: 200px;
   margin: 0 auto;
-  margin-top: 50%; 
+  margin-top: 50%;
   margin-bottom: 33px;
+  padding: 8px 0;
 }
 .items-panel .add-compare {
   display: block;
@@ -1707,6 +1726,10 @@ footer {
   line-height: 24px;
   font-family: gilroy, Arial, sans-serif;
   letter-spacing: 0.01em;
+}
+
+.item:hover .actions {
+  display: block;
 }
 
 .flag {
@@ -1741,7 +1764,7 @@ footer {
 }
 
 .catalog-filter {
-  width: 37%;
+  width: 38%;
   overflow: hidden;
 }
 .catalog-filter fieldset {
@@ -1769,7 +1792,7 @@ footer {
 .filter-title {
   width: 201px;
   margin-bottom: 35px;
-  padding-top: 16px;
+  padding-top: 10px;
 
   font-weight: 800;
   font-size: 18px;
@@ -1780,12 +1803,16 @@ footer {
   border-top: 2px solid black;
 }
 
-.bt-margin {
-  margin-bottom: 28px;
+.color-legend-margin {
+  margin-bottom: 20px;
 }
 
-.bt-filter {
-  margin-bottom: 50px;
+.bt-margin {
+  margin-bottom: 20px;
+}
+
+.catalog-filter .bt-filter {
+  margin-bottom: 30px;
 }
 
 .range-controls {
@@ -1830,7 +1857,7 @@ footer {
 }
 .range-controls .max-price {
   top: 10px;
-  right: 28px;
+  right: 37px;
 }
 .range-controls input {
   width: 50px;
@@ -1868,7 +1895,7 @@ footer {
 }
 
 .range-toggle-max {
-  left: 60%;
+  left: 55%;
 }
 
 .item:nth-child(2n+1) {
@@ -1881,11 +1908,93 @@ footer {
 
 .color-filter label,
 .bt-filter label {
+  position: relative;
+
   display: block;
 }
 
-.color-filter {
-  margin-bottom: 20px;
+.catalog-filter ul {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter li {
+  padding-left: 45px; 
+
+  list-style: none;
+}
+
+.color-filter label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.catalog-filter .color-filter {
+  margin-bottom: 30px;
+}
+
+.color-filter label::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -42px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -38px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -42px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -42px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .catalog-filter {
@@ -2021,7 +2130,7 @@ footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 760px;
-  margin-bottom: 77px; 
+  margin-bottom: 72px; 
   margin-left: 72px;
 
   background-color: #eaeaea;
@@ -2042,7 +2151,7 @@ footer {
   font-family: gilroy, Arial, sans-serif;
   text-align: center; 
   text-transform: uppercase;
-  letter-spacing: normal;
+  letter-spacing: 0.2em;
 }
 
 .pagination-group a {
