@@ -3,12 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
-
 <header class="main-header">
 
   <nav class="header-menu container inner-page">
@@ -24,7 +22,6 @@
         </div>
       </form>
       <ul class="user-navigation">
-
         <li><a href="#" class="enter-nav-icon">Валентин Петухов</a></li>
         <li><a href="#" class="logout">Выйти</a></li>
         <li>
@@ -60,7 +57,6 @@
         <li><a href="#">Гарантия</a></li>
         <li class="last-site-nav"><a href="#">Контакты</a></li>
       </ul>
-
     </div>
   </nav>
 
@@ -78,14 +74,10 @@
   </div>
 
   <section>
-
     <h2 class="visually-hidden">Навигация по категории товаров магазина современных гаджетов «Device»</h2>
-
     <div class="catalog-wrapper">
-
       <div class="catalog-filter">
         <b class="catalog-filter-title">Фильтр:</b>
-
         <form action="https://echo.htmlacademy.ru">
           <fieldset>
             <div class="filter-range">
@@ -105,23 +97,23 @@
             <legend class="filter-title color-legend-margin">Цвет</legend>
             <ul class="color-filter">
               <li>
-                <input type="checkbox" id="black" class="visually-hidden filter-input-checkbox" checked>
+                <input type="checkbox" id="black" name="color" value="black" class="visually-hidden filter-input-checkbox" checked>
                 <label for="black">Чёрный</label>
               </li>
               <li>
-                <input type="checkbox" id="white" class="visually-hidden filter-input-checkbox">
+                <input type="checkbox" id="white" name="color" value="white" class="visually-hidden filter-input-checkbox">
                 <label for="white">Белый</label>
               </li>
               <li>
-                <input type="checkbox" id="blue" class="visually-hidden filter-input-checkbox" checked>
+                <input type="checkbox" id="blue" name="color" value="blue" class="visually-hidden filter-input-checkbox" checked>
                 <label for="blue">Синий</label>
               </li>
               <li>
-                <input type="checkbox" id="red" class="visually-hidden filter-input-checkbox" checked>
+                <input type="checkbox" id="red" name="color" value="red" class="visually-hidden filter-input-checkbox" checked>
                 <label for="red">Красный</label>
               </li>
               <li>
-                <input type="checkbox" id="pink" class="visually-hidden filter-input-checkbox">
+                <input type="checkbox" id="pink" name="color" value="pink" class="visually-hidden filter-input-checkbox">
                 <label for="pink">Розовый</label>
               </li>
             </ul>
@@ -139,14 +131,11 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button" type="button" aria-label="Отфильтровать товары">Показать</button>
+          <button class="button" type="submit" aria-label="Отфильтровать товары">Показать</button>
         </form>
       </div>
-
       <div class="catalog-items">
-
         <div class="items-wrapper">
-
           <div class="sorting-panel">
             <b>Сортировка:</b>
             <a href="#" aria-label="Отсортировать товары по цене" class="chosen-sort">По цене</a>
@@ -156,7 +145,6 @@
               <a href="#" class="cheep-sort" aria-label="Отсортировать товары - вначале дешёвые"></a>
               <a href="#" class="expensive-sort" aria-label="Отсортировать товары - вначале дорогие"></a>
             </div>
-
           </div>
           <div class="items-panel">
             <div class="item">
@@ -166,7 +154,7 @@
               </div>
               <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <div class="item-info">
-                <h2>Любительская селфи-палка</h2>
+                <a href="#"><h2>Любительская селфи-палка</h2></a>
                 <span class="item-price">500 руб.</span>
               </div>
             </div>
@@ -177,7 +165,7 @@
               </div>
               <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="item-info">
-                <h2 class="short-info">Профессиональная селфи-палка</h2>
+                <a href="#"><h2 class="short-info">Профессиональная селфи-палка</h2></a>
                 <span class="item-price">1 500 руб.</span>
               </div>
             </div>
@@ -188,7 +176,7 @@
               </div>
               <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <div class="item-info">
-                <h2>Непотопляемая селфи-палка</h2>
+                <a href="#"><h2>Непотопляемая селфи-палка</h2></a>
                 <span class="item-price">2 500 руб.</span>
               </div>
             </div>
@@ -200,7 +188,7 @@
               </div>
               <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <div class="item-info">
-                <h2>Селфи-палка «Следуй за мной»</h2>
+                <a href="#"><h2>Селфи-палка «Следуй за мной»</h2></a>
                 <span class="item-price">4 900 руб.</span>
               </div>
             </div>
@@ -218,12 +206,14 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="no-margin inner-page">
+
   <div class="container">
     <div class="footer-first-line">
-      <a href="#" class="footer-logo"><img src="img/logo-footer.svg" width="163" height="36"
+      <a href="index.html" class="footer-logo"><img src="img/logo-footer.svg" width="163" height="36"
                                            alt="Логотип магазина современных гаджетов «Device»"></a>
       <ul class="inner-footer-user-navigation">
         <li><a href="#" class="enter-nav-icon">Валентин Петухов</a></li>
@@ -259,12 +249,12 @@
                                                       alt="Страница в Twitter магазина современных гаджетов «Device»"></a>
         </li>
       </ul>
-      <a href="https://htmlacademy.ru.com" class="mentor-link" aria-label="Сайт «HTML аккадемии»"><img
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="mentor-link" aria-label="Сайт «HTML аккадемии»"><img
         src="img/logo-html.svg" width="26" height="34" alt="Сайт «HTML академии»"></a>
     </div>
   </div>
+
 </footer>
 
 </body>
-
 </html>
