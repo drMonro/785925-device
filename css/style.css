@@ -1005,27 +1005,29 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
   position: absolute;
-  top: 240px;
-  right: 23px;
+  top: 244px;
+  right: 35px;
   z-index: 100;
 
-  font-size: 0;
-  text-align: center;
+  width: 160px;
+  height: 12px;
 
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  font-size: 0; 
+  text-align: center;
 }
 
 .slider-controls label {
   position: relative;
 
   display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 12px;
   height: 12px;
-  padding: 8px 10px;
+  margin-right: 13px; 
+  padding: 10px;
 
-  vertical-align: top; 
+  vertical-align: top;
 
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -1035,14 +1037,36 @@ input[type="radio"].visually-hidden {
 .slider-controls label::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 4px;
+  left: 4px;
   z-index: 1;
 
-  width: 10px;
-  height: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 12px;
+  height: 12px;
 
   background: #ffffff;
+  border: 1px solid #000000;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+
   border: 1px solid #000000;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -1153,27 +1177,6 @@ input[type="radio"].visually-hidden {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
-}
-
-#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
-#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
-#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 43%;
-  z-index: 2;
-
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 5px;
-  height: 5px;
-  margin: -3px;
-
-  background-color: inherit;
-  border: 1px solid #000000;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
 }
 
 .slider-list li:nth-child(3) b {
