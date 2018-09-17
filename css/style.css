@@ -1646,6 +1646,8 @@ footer ul {
   background-color: #595959;
 }
 .main-footer .container {
+  padding-bottom: 60px; 
+
   background-color: #595959;
 }
 
